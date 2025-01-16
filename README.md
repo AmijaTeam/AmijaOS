@@ -11,6 +11,8 @@
 
 - DanXvo https://github.com/DanXvoIsMe
 
+- Logic
+
 - gamma63 https://github.com/gamma63
 
 ## License
