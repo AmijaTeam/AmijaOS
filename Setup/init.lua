@@ -290,19 +290,19 @@ end
 local function online()
     local dists = {}
 
-    local filelist = split(assert(getInternetFile("https://raw.githubusercontent.com/matvey-mayner/AmijaOS/main/Setup/list.txt")), "\n")
+    local filelist = split(assert(getInternetFile("https://raw.githubusercontent.com/AmijaTeam/AmijaOS/main/Setup/list.txt")), "\n")
     for i, v in ipairs(filelist) do
         if v ~= "" then
             local url, name = table.unpack(split(v, ";"))
             table.insert(dists, {name = name, call = function(proxy)
-                download("https://raw.githubusercontent.com/matvey-mayner/AmijaOS/main", proxy)
+                download("https://raw.githubusercontent.com/AmijaTeam/AmijaOS/main", proxy)
                 download(url, proxy)
             end})
         end
     end
 
     table.insert(dists, {name = "AmijaOS", call = function(proxy)
-        download("https://raw.githubusercontent.com/matvey-mayner/AmijaOS/main", proxy)
+        download("https://raw.githubusercontent.com/AmijaTeam/AmijaOS/main", proxy)
     end})
 
     selectDist(dists)
